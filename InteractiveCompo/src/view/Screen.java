@@ -1,6 +1,8 @@
 package view;
 
 import java.util.ArrayList;
+
+import controller.Controller;
 import processing.core.PApplet;
 
 public class Screen extends PApplet{
@@ -10,10 +12,16 @@ public static void main(String[] args) {
 	// TODO Auto-generated method stub
 	PApplet.main(Screen.class.getName());
 }
+//public Controller controller;
+CompoScreen compo;
 String [] story;
 ArrayList <String> words;
+int state;
 public void settings() {
-	size (200,200);
+	size (1171,659);
+	//controller=new Controller();
+	compo = new CompoScreen(this);
+	state = 1;
 }
 public void setup() {
 	story = loadStrings("../resources/story.txt");
@@ -23,14 +31,17 @@ public void setup() {
 		for (int j = 0; j < tempArray.length; j++) {
 			words.add(tempArray[j].trim());
 		}
-		
 	}
 }
 public void draw(){
-	background (0);
+	switch(state) {
+	case 1 :
+	compo.PaintCompo();
 	for (String element : words) {
 		if (element.equals("gorrión"));
-		ellipse(40, 50, 40, 40);
+		//controller.draw();
 	}
+}
+	
 }
 }

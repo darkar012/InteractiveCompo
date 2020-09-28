@@ -10,24 +10,15 @@ public class Interactive extends PApplet{
 		// TODO Auto-generated method stub
 		PApplet.main(Interactive.class.getName());
 	}
-	//String [] story;
-	//ArrayList <String> words;
+	Sparrow sparrow;
 	public void settings() {
-		
+		sparrow = new Sparrow(this);
 	}
-	public void setup() {/*
-		story = loadStrings("../resources/story.txt");
-		words = new ArrayList<String>();
-		for (int i = 0; i < story.length; i++) {
-			String [] tempArray = story[i].split(" ");
-			for (int j = 0; j < tempArray.length; j++) {
-				words.add(tempArray[j].trim());
-			}
-			
-		} */
+	public void setup() {
+
 	}
 	public void draw() {
-		
+		sparrow.paintObject();
 	}
 	public void mousePressed() {
 		
