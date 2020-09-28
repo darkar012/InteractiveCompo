@@ -20,4 +20,19 @@ public void paintCompo() {
 public void drawSparrow() {
 	control.drawSparrow();
 }
+public void drawBamboo() {
+	control.drawBamboo();
+}
+public void drawOldWoman() {
+	control.drawOldWoman();
+}
+public void drawOni() {
+	control.drawOni();
+}
+public void drawBox() {
+	control.drawBox();
+}
+public void drawBoxCover() {
+	control.drawBoxCover();
+}
 }

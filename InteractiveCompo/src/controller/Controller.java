@@ -14,4 +14,19 @@ public class Controller {
 	public void drawSparrow() {
 		interactive.drawSparrow();
 	}
+	public void drawBamboo() {
+		interactive.drawBamboo();
+	}
+	public void drawOldWoman() {
+		interactive.drawOldWoman();
+	}
+	public void drawOni() {
+		interactive.drawOni();
+	}
+	public void drawBox() {
+		interactive.drawBox();
+	}
+	public void drawBoxCover() {
+		interactive.drawBoxCover();
+	}
 }
