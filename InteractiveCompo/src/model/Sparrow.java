@@ -7,7 +7,7 @@ public class Sparrow extends Object{
 		super(app);
 		object=app.loadImage("../resources/Sparrows.png");
 	}
-	protected void paintObject() {
+	public void paintObject() {
 		app.image(object, 0, 0);
 	}
 }

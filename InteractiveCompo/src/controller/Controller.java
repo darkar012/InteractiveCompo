@@ -1,14 +1,17 @@
 package controller;
 
 import model.Interactive;
+import processing.core.PApplet;
 
 public class Controller {
-	protected Interactive interactive;
+	public Interactive interactive;
+	PApplet app;
 	
-	public Controller () {
-		interactive = new Interactive();
+	public Controller (PApplet app) {
+		this.app = app;
+		interactive = new Interactive(app);
 	}
-	public void draw() {
-		interactive.draw();
+	public void drawSparrow() {
+		interactive.drawSparrow();
 	}
 }
