@@ -35,4 +35,19 @@ public class CompoScreen extends PApplet{
 	public void drawBoxCover() {
 		control.drawBoxCover();
 	}
+	public void drawShineOld() {
+		control.drawShineOld();
+	}
+	public void drawShineBamboo() {
+		control.drawShineBamboo();
+	}
+	public void drawShineSparrow() {
+		control.drawShineSparrow();
+	}
+	public void drawShineBoxCover() {
+		control.drawShineBoxCover();
+	}
+	public void drawShineOni() {
+		control.drawShineOni();
+	}
 }

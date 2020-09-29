@@ -11,17 +11,13 @@ public class Screen extends PApplet{
 		// TODO Auto-generated method stub
 		PApplet.main(Screen.class.getName());
 	}
-	//public Controller controller;
-	boolean paintedS;
 	CompoScreen compo;
 	String [] story;
 	ArrayList <String> words;
 	int state;
 	public void settings() {
 		size (1171,659);
-		//controller=new Controller();
 		compo = new CompoScreen(this);
-		paintedS = false;
 		state = 1;
 	}
 	public void setup() {
@@ -42,6 +38,20 @@ public class Screen extends PApplet{
 		case 1 :
 
 			compo.paintCompo();
+			if (mouseX > 658 && mouseX < 658 + 227
+					&& mouseY > 430 && mouseY < 430+225 ) {
+				compo.drawShineOld();
+		} else if (mouseX > 849 && mouseX < 849 + 321
+				&& mouseY > 0 && mouseY < 0+283 ) {
+			compo.drawShineBamboo();
+		}else if (mouseX > 0 && mouseX < 0 + 323
+				&& mouseY > 291 && mouseY < 291 +120 ) {
+			compo.drawShineSparrow();
+		}else if (mouseX > 896 && mouseX < 896 + 275
+				&& mouseY > 312 && mouseY < 312 +235 ) {
+			compo.drawShineBoxCover();
+			}
+			
 			for (int i = 0; i < words.size(); i++) {
 				if (words.get(i).equals("GORRIÓN(1)")) {
 					compo.drawSparrow();
@@ -56,9 +66,13 @@ public class Screen extends PApplet{
 				}else if (words.get(i).equals("tapa")) {
 					compo.drawBoxCover();
 				}
+				System.out.println(mouseX);
+				System.out.println(mouseY);
+				
 				//System.out.println(element);
 			}
 		}
 
 	}
+	
 }

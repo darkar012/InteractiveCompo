@@ -29,4 +29,19 @@ public class Controller {
 	public void drawBoxCover() {
 		interactive.drawBoxCover();
 	}
-}
+	public void drawShineOld() {
+		interactive.drawShineOld();
+	}
+	public void drawShineBamboo(){
+		interactive.drawShineBamboo();
+	}
+	public void drawShineSparrow(){
+		interactive.drawShineSparrow();
+	}
+	public void drawShineBoxCover() {
+		interactive.drawShineBoxCover();
+	}
+	public void drawShineOni() {
+		interactive.drawShineOni();
+	}
+	}

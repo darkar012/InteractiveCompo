@@ -39,5 +39,20 @@ public class Interactive extends PApplet{
 	public void drawBoxCover(){
 		boxCover.paintObject();
 	}
+	public void drawShineOld() {
+		oldWoman.paintShine();
+	}
+	public void drawShineBamboo() {
+		bamboo.paintShine();
+	}
+	public void drawShineSparrow() {
+		sparrow.paintShine();
+	}
+	public void drawShineBoxCover() {
+		boxCover.paintShine();
+	}
+	public void drawShineOni() {
+		oni.paintShine();
+	}
 
 }

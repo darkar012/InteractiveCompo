@@ -7,8 +7,12 @@ public class OldWoman extends Object{
 		public OldWoman (PApplet app) {
 			super(app);
 			object=app.loadImage("../resources/oldWoman.png");
+			shine = app.loadImage("../resources/shineOldWoman.png");
 		}
-		public void paintObject() {
+		protected void paintObject() {
 			app.image(object, 600, 399);
+		}
+		protected void paintShine() {
+			app.image(shine, 600, 399);
 		}
 	}
