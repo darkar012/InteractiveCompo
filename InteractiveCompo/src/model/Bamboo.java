@@ -5,8 +5,8 @@ import processing.core.PApplet;
 
 public class Bamboo extends Object{
 	
-		public Bamboo (PApplet app) {
-			super(app);
+		public Bamboo (int x, int y, PApplet app) {
+			super(x, y, app);
 			object=app.loadImage("../resources/bamboo.png");
 			shine=app.loadImage("../resources/bambooShine.png");
 		}

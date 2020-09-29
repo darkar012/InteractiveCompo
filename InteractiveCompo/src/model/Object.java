@@ -7,8 +7,13 @@ public abstract class Object extends PApplet{
 	PImage object;
 	PApplet app;
 	PImage shine;
-	public Object (PApplet app) {
+	private int x;
+	private int y;
+	public Object (int x, int y, PApplet app) {
 		this.app=app;
+		this.x = x;
+		this.y = y;
+		
 	}
 	protected void paintObject () {
 		app.image(object, 0, 0);
@@ -16,4 +21,17 @@ public abstract class Object extends PApplet{
 	protected void paintShine () {
 		app.image(shine, 0, 0);
 	}
+	public int getX() {
+		return x;
+	}
+	public void setX(int x) {
+		this.x = x;
+	}
+	public int getY() {
+		return y;
+	}
+	public void setY(int y) {
+		this.y = y;
+	}
+	
 }

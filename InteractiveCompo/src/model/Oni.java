@@ -4,8 +4,8 @@ import processing.core.PApplet;
 
 public class Oni extends Object{
 
-	public Oni (PApplet app) {
-		super(app);
+	public Oni (int x, int y, PApplet app) {
+		super(x, y, app);
 		object=app.loadImage("../resources/Oni.png");
 		shine=app.loadImage("../resources/oniShine.png");
 	}

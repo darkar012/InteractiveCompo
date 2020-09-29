@@ -74,5 +74,10 @@ public class Screen extends PApplet{
 		}
 
 	}
-	
+	/*public void mouseDragged() {
+		if (mouseX > 658 && mouseX < 658 + 227
+				&& mouseY > 430 && mouseY < 430+225 ) {
+			compo.lessX();
+		}
+	}*/
 }

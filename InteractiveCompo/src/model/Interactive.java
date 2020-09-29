@@ -10,15 +10,16 @@ public class Interactive extends PApplet{
 	Object oni;
 	Object box;
 	Object boxCover;
-
+	int x;
+	int y;
 	public Interactive (PApplet app){
 		this.app=app;
-		sparrow = new Sparrow(app);
-		bamboo = new Bamboo(app);
-		oldWoman = new OldWoman(app);
-		oni = new Oni (app);
-		box = new Box (app);
-		boxCover = new BoxCover(app);
+		sparrow = new Sparrow(x, y, app);
+		bamboo = new Bamboo(x, y, app);
+		oldWoman = new OldWoman(x, y, app);
+		oni = new Oni (x, y, app);
+		box = new Box (x, y, app);
+		boxCover = new BoxCover(x, y, app);
 	}
 
 	public void drawSparrow() {
@@ -55,4 +56,9 @@ public class Interactive extends PApplet{
 		oni.paintShine();
 	}
 
+	/*public void lessX() {
+		x--;
+	}*/
+	
+	
 }

@@ -4,8 +4,8 @@ import processing.core.PApplet;
 
 public class OldWoman extends Object{
 	
-		public OldWoman (PApplet app) {
-			super(app);
+		public OldWoman (int x, int y, PApplet app) {
+			super(x, y, app);
 			object=app.loadImage("../resources/oldWoman.png");
 			shine = app.loadImage("../resources/shineOldWoman.png");
 		}

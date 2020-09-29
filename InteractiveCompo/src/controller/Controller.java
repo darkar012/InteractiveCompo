@@ -44,4 +44,8 @@ public class Controller {
 	public void drawShineOni() {
 		interactive.drawShineOni();
 	}
-	}
+	/*public void lessX() {
+		interactive.lessX();
+	
+	}*/
+}
