@@ -9,7 +9,7 @@ public class Box extends Object{
 		object=app.loadImage("../resources/box.png");
 	}
 	public void paintObject() {
-		app.image(object, 685, 0);
+		app.image(object, 863, 400);
 	}
 }
 

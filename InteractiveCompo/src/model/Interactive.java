@@ -10,6 +10,7 @@ public class Interactive extends PApplet{
 	Object oni;
 	Object box;
 	Object boxCover;
+
 	public Interactive (PApplet app){
 		this.app=app;
 		sparrow = new Sparrow(app);
@@ -38,5 +39,5 @@ public class Interactive extends PApplet{
 	public void drawBoxCover(){
 		boxCover.paintObject();
 	}
-	
+
 }

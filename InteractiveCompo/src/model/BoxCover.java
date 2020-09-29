@@ -9,6 +9,6 @@ public class BoxCover extends Object{
 		object=app.loadImage("../resources/boxCover.png");
 	}
 	public void paintObject() {
-		app.image(object, 685, 0);
+		app.image(object, 863, 300);
 	}
 }
