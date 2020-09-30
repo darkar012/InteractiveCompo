@@ -8,8 +8,13 @@ public class Box extends Object{
 		super(x, y, app);
 		object=app.loadImage("../resources/box.png");
 	}
-	public void paintObject() {
-		app.image(object, 863, 400);
+	protected void paintObject() {
+		app.image(object, x+863, y+400);
+	}
+	@Override
+	protected void dragObject() {
+		// TODO Auto-generated method stub
+		
 	}
 }
 

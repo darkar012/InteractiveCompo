@@ -50,7 +50,10 @@ public class CompoScreen extends PApplet{
 	public void drawShineOni() {
 		control.drawShineOni();
 	}
-	/*public void lessX() {
-		control.lessX();
+	public void drawLeaf() {
+		control.drawLeaf();
+	}
+	/*public void dragOld() {
+		control.dragOld();
 	}*/
 }

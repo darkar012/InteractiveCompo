@@ -7,8 +7,8 @@ public abstract class Object extends PApplet{
 	PImage object;
 	PApplet app;
 	PImage shine;
-	private int x;
-	private int y;
+	protected int x;
+	protected int y;
 	public Object (int x, int y, PApplet app) {
 		this.app=app;
 		this.x = x;
@@ -33,5 +33,6 @@ public abstract class Object extends PApplet{
 	public void setY(int y) {
 		this.y = y;
 	}
+	protected abstract void dragObject();
 	
 }

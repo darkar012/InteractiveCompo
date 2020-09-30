@@ -11,10 +11,15 @@ public class Bamboo extends Object{
 			shine=app.loadImage("../resources/bambooShine.png");
 		}
 		protected void paintObject() {
-			app.image(object, 685, 0);
+			app.image(object, x+685, y+0);
 		}
 		protected void paintShine() {
 			app.image(shine,685,0);
+		}
+		@Override
+		protected void dragObject() {
+			// TODO Auto-generated method stub
+			
 		}
 	}
 

@@ -15,10 +15,12 @@ public class Screen extends PApplet{
 	String [] story;
 	ArrayList <String> words;
 	int state;
+	int interaction;
 	public void settings() {
 		size (1171,659);
 		compo = new CompoScreen(this);
 		state = 1;
+		interaction = 0;
 	}
 	public void setup() {
 		story = loadStrings("../resources/story.txt");
@@ -66,18 +68,28 @@ public class Screen extends PApplet{
 				}else if (words.get(i).equals("tapa")) {
 					compo.drawBoxCover();
 				}
-				System.out.println(mouseX);
-				System.out.println(mouseY);
+				//System.out.println(mouseX);
+				//System.out.println(mouseY);
 				
-				//System.out.println(element);
+			}
+			switch (interaction) {
+			case 1:
+				compo.drawLeaf();
+				break;
+			case 2:
+				
 			}
 		}
 
 	}
-	/*public void mouseDragged() {
-		if (mouseX > 658 && mouseX < 658 + 227
-				&& mouseY > 430 && mouseY < 430+225 ) {
-			compo.lessX();
+	public void mouseDragged() {
+			//compo.dragOld();
+		
+	}
+	public void mousePressed() {
+		if (mouseX > 849 && mouseX < 849 + 321
+				&& mouseY > 0 && mouseY < 0+283 ) {
+			interaction = 1;
 		}
-	}*/
+	}
 }

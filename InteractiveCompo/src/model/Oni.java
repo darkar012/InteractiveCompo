@@ -15,4 +15,9 @@ public class Oni extends Object{
 	protected void paintShine() {
 		app.image(shine, 900, 300);
 	}
+	@Override
+	protected void dragObject() {
+		// TODO Auto-generated method stub
+		
+	}
 }

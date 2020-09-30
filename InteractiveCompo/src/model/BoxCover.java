@@ -15,4 +15,9 @@ public class BoxCover extends Object{
 	protected void paintShine(){
 		app.image(shine, getX()+863, getY()+300);
 	}
+	@Override
+	protected void dragObject() {
+		// TODO Auto-generated method stub
+		
+	}
 	}

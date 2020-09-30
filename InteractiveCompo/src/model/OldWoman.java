@@ -10,9 +10,12 @@ public class OldWoman extends Object{
 			shine = app.loadImage("../resources/shineOldWoman.png");
 		}
 		protected void paintObject() {
-			app.image(object, 600, 399);
+			app.image(object, x+600, y+ 399);
 		}
 		protected void paintShine() {
 			app.image(shine, 600, 399);
+		}
+		public void dragObject() {
+			app.image(object, mouseX, mouseY);
 		}
 	}
