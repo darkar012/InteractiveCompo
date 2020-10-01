@@ -52,6 +52,11 @@ public class Controller {
 	}
 	public void dragOld() {
 		interactive.dragOld();
-	
 	}
+	public void dragOni(){
+		interactive.dragOni();
+	}	
+	public void dragBoxCover(){
+		interactive.dragBoxCover();
+	}	
 }

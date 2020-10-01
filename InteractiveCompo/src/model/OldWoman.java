@@ -17,6 +17,6 @@ public class OldWoman extends Object{
 			app.image(shine, x, y);
 		}
 		public void dragObject() {
-			x=mouseX-x;
+			setX(app.mouseX);
 		}
 	}

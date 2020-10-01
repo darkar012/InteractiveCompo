@@ -10,14 +10,15 @@ public class BoxCover extends Object{
 		shine=app.loadImage("../resources/boxCoverShine.png");
 	}
 	protected void paintObject() {
-		app.image(object, getX()+863, getY()+300);
+		app.image(object, x, y);
 	}
 	protected void paintShine(){
-		app.image(shine, getX()+863, getY()+300);
+		app.image(shine, x, y);
 	}
 	@Override
 	protected void dragObject() {
 		// TODO Auto-generated method stub
-		
+		setY(app.mouseY);
+		setX(app.mouseX);
 	}
 	}

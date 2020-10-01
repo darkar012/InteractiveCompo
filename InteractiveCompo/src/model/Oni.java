@@ -18,6 +18,6 @@ public class Oni extends Object{
 	@Override
 	protected void dragObject() {
 		// TODO Auto-generated method stub
-		
+		setY(app.mouseY);
 	}
 }

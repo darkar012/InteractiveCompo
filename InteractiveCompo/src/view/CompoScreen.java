@@ -59,4 +59,10 @@ public class CompoScreen extends PApplet{
 	public void dragOld() {
 		control.dragOld();
 	}
+	public void dragOni(){
+		control.dragOni();
+	}	
+	public void dragBoxCover(){
+		control.dragBoxCover();
+	}	
 }

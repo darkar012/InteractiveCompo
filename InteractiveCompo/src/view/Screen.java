@@ -18,12 +18,14 @@ public class Screen extends PApplet{
 	int interaction;
 	int time;
 	boolean disable;
+	boolean dragged;
 	public void settings() {
 		size (1171,659);
 		compo = new CompoScreen(this);
 		state = 1;
 		interaction = 0;
 		disable = false;
+		dragged = false;
 	}
 	public void setup() {
 		story = loadStrings("../resources/story.txt");
@@ -111,12 +113,27 @@ public class Screen extends PApplet{
 							break;
 		}
 	}
+	/*public void mouseRelease() {
+		if (mouseX > 658 && mouseX < 658 + 227
+				&& mouseY > 430 && mouseY < 430+225 ) {
+		locked = false;
+		}
+	}*/
 	public void mouseDragged() {
 		switch (state) {
 		case 1:
-			if (mouseX > 500 && mouseX < 658 + 227
+			dragged=true;
+			if (mouseX > 550 && mouseX < 658 + 227
 					&& mouseY > 430 && mouseY < 430+225 ) {
-				interaction=3;
+				compo.dragOld();
+				dragged=false;
+			} 
+			if (mouseX > 1000 && mouseX < 1000 + 120
+					&& mouseY > 108 && mouseY < 208 +204) {
+				compo.dragOni();
+			}if (mouseX > 200 && mouseX < 896 + 275
+					&& mouseY > 200 && mouseY < 312 +235 ) {
+				compo.dragBoxCover();
 			}
 			break;
 		}
