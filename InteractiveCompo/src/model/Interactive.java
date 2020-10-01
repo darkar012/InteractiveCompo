@@ -18,7 +18,7 @@ public int y;
 		sparrow = new Sparrow(0, 0, app);
 		bamboo = new Bamboo(685, 0, app);
 		leaf = new Leaf (600,0, app);
-		oldWoman = new OldWoman(x, y, app);
+		oldWoman = new OldWoman(600, 399, app);
 		oni = new Oni (900, 300, app);
 		box = new Box (0, 0, app);
 		boxCover = new BoxCover(0, 0, app);
@@ -64,9 +64,9 @@ public int y;
 		sparrow.paintLaugh();
 	}
 
-	/*public void dragOld() {
+	public void dragOld() {
 		oldWoman.dragObject();
-	}*/
+	}
 	
 	
 }

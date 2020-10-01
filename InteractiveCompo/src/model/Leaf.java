@@ -16,7 +16,9 @@ PImage leaf;
 	}
 	public void paintLeaf() {
 		app.image(leaf, x, y);
+		x=x+5;
 		x++;
+		y=y+5;
 		y++;
 	}
 }

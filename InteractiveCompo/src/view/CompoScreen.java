@@ -56,7 +56,7 @@ public class CompoScreen extends PApplet{
 	public void drawLaugh() {
 		control.drawLaugh();
 	}
-	/*public void dragOld() {
+	public void dragOld() {
 		control.dragOld();
-	}*/
+	}
 }

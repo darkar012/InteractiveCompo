@@ -90,27 +90,36 @@ public class Screen extends PApplet{
 					disable = false;
 					interaction = 0;
 				}
+			break;
+			case 3:
+				compo.dragOld();
+				break;
 			}
 		}
-
-	}
-	public void mouseDragged() {
-		//compo.dragOld();
 
 	}
 	public void mouseClicked() {
 		switch (state) {
 		case 1:
 			if (mouseX > 849 && mouseX < 849 + 321
-					&& mouseY > 0 && mouseY < 0+283 ) {
+					&& mouseY > 0 && mouseY < 0+283) {
 				interaction = 1;
-			}
-			if (mouseX > 0 && mouseX < 0 + 323
-					&& mouseY > 291 && mouseY < 291 +120);{
+			}else if (mouseX > 0 && mouseX < 0 + 323
+					&& mouseY > 291 && mouseY < 291 +120){
 						interaction = 2;
-					}
-
 		}
+							break;
 		}
 	}
+	public void mouseDragged() {
+		switch (state) {
+		case 1:
+			if (mouseX > 500 && mouseX < 658 + 227
+					&& mouseY > 430 && mouseY < 430+225 ) {
+				interaction=3;
+			}
+			break;
+		}
+	}
+}
 

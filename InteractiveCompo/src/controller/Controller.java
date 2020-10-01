@@ -50,8 +50,8 @@ public class Controller {
 	public void drawLaugh() {
 		interactive.drawLaugh();
 	}
-	/*public void dragOld() {
+	public void dragOld() {
 		interactive.dragOld();
 	
-	}*/
+	}
 }
