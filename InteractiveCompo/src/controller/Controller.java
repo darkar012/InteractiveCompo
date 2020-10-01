@@ -47,6 +47,9 @@ public class Controller {
 	public void drawLeaf() {
 		interactive.drawLeaf();
 	}
+	public void drawLaugh() {
+		interactive.drawLaugh();
+	}
 	/*public void dragOld() {
 		interactive.dragOld();
 	

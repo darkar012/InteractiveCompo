@@ -16,11 +16,14 @@ public class Screen extends PApplet{
 	ArrayList <String> words;
 	int state;
 	int interaction;
+	int time;
+	boolean disable;
 	public void settings() {
 		size (1171,659);
 		compo = new CompoScreen(this);
 		state = 1;
 		interaction = 0;
+		disable = false;
 	}
 	public void setup() {
 		story = loadStrings("../resources/story.txt");
@@ -43,19 +46,22 @@ public class Screen extends PApplet{
 			if (mouseX > 658 && mouseX < 658 + 227
 					&& mouseY > 430 && mouseY < 430+225 ) {
 				compo.drawShineOld();
-		} else if (mouseX > 849 && mouseX < 849 + 321
-				&& mouseY > 0 && mouseY < 0+283 ) {
-			compo.drawShineBamboo();
-		}else if (mouseX > 0 && mouseX < 0 + 323
-				&& mouseY > 291 && mouseY < 291 +120 ) {
-			compo.drawShineSparrow();
-		}else if (mouseX > 896 && mouseX < 896 + 275
-				&& mouseY > 312 && mouseY < 312 +235 ) {
-			compo.drawShineBoxCover();
+			} else if (mouseX > 849 && mouseX < 849 + 321
+					&& mouseY > 0 && mouseY < 0+283 ) {
+				compo.drawShineBamboo();
+			}else if (mouseX > 0 && mouseX < 0 + 323
+					&& mouseY > 291 && mouseY < 291 +120 && disable == false) {
+				compo.drawShineSparrow();
+			}else if (mouseX > 1000 && mouseX < 1000 + 120
+					&& mouseY > 308 && mouseY < 308 +64) {
+				compo.drawShineOni();
+			}else if (mouseX > 896 && mouseX < 896 + 275
+					&& mouseY > 312 && mouseY < 312 +235 ) {
+				compo.drawShineBoxCover();
 			}
-			
+
 			for (int i = 0; i < words.size(); i++) {
-				if (words.get(i).equals("GORRIÓN(1)")) {
+				if (words.get(i).equals("GORRIÓN(1)") && disable == false) {
 					compo.drawSparrow();
 				}else if (words.get(i).equals("reían(1)")) {
 					compo.drawOni();
@@ -70,26 +76,41 @@ public class Screen extends PApplet{
 				}
 				//System.out.println(mouseX);
 				//System.out.println(mouseY);
-				
+				System.out.println(interaction);
+
 			}
 			switch (interaction) {
 			case 1:
 				compo.drawLeaf();
 				break;
 			case 2:
-				
+				compo.drawLaugh();
+				disable = true;
+				if (frameCount %30 == 0) {
+					disable = false;
+					interaction = 0;
+				}
 			}
 		}
 
 	}
 	public void mouseDragged() {
-			//compo.dragOld();
-		
+		//compo.dragOld();
+
 	}
-	public void mousePressed() {
-		if (mouseX > 849 && mouseX < 849 + 321
-				&& mouseY > 0 && mouseY < 0+283 ) {
-			interaction = 1;
+	public void mouseClicked() {
+		switch (state) {
+		case 1:
+			if (mouseX > 849 && mouseX < 849 + 321
+					&& mouseY > 0 && mouseY < 0+283 ) {
+				interaction = 1;
+			}
+			if (mouseX > 0 && mouseX < 0 + 323
+					&& mouseY > 291 && mouseY < 291 +120);{
+						interaction = 2;
+					}
+
+		}
 		}
 	}
-}
+

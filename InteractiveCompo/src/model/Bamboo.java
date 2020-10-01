@@ -11,10 +11,10 @@ public class Bamboo extends Object{
 			shine=app.loadImage("../resources/bambooShine.png");
 		}
 		protected void paintObject() {
-			app.image(object, x+685, y+0);
+			app.image(object, x, y);
 		}
 		protected void paintShine() {
-			app.image(shine,685,0);
+			app.image(shine,x,y);
 		}
 		@Override
 		protected void dragObject() {

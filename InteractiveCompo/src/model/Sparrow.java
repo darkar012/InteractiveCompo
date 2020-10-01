@@ -9,17 +9,20 @@ public class Sparrow extends Object{
 		super(x, y, app);
 		object=app.loadImage("../resources/Sparrows.png");
 		shine = app.loadImage("../resources/sparrowShine.png");
-		//laugh = app.loadImage(filename);
+		laugh = app.loadImage("../resources/sparrowLaugh.png");
 	}
 	protected void paintObject() {
-		app.image(object, 0, 0);
+		app.image(object, x, y);
 	}
 	protected void paintShine() {
-		app.image(shine,0,0);
+		app.image(shine,x,y);
 	}
 	@Override
 	protected void dragObject() {
 		// TODO Auto-generated method stub
 		
+	}
+	public void paintLaugh() {
+		app.image(laugh, x, y);
 	}
 }

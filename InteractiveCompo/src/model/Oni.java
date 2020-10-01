@@ -10,10 +10,10 @@ public class Oni extends Object{
 		shine=app.loadImage("../resources/oniShine.png");
 	}
 	protected void paintObject() {
-		app.image(object, 900, 300);
+		app.image(object, x, y);
 	}
 	protected void paintShine() {
-		app.image(shine, 900, 300);
+		app.image(shine, x, y);
 	}
 	@Override
 	protected void dragObject() {

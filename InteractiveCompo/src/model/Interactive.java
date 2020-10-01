@@ -4,7 +4,7 @@ import processing.core.PApplet;
 
 public class Interactive extends PApplet{
 	PApplet app;
-	Object sparrow;
+	Sparrow sparrow;
 	Object bamboo;
 	Object oldWoman;
 	Object oni;
@@ -16,10 +16,10 @@ public int y;
 	public Interactive (PApplet app){
 		this.app=app;
 		sparrow = new Sparrow(0, 0, app);
-		bamboo = new Bamboo(x, y, app);
+		bamboo = new Bamboo(685, 0, app);
 		leaf = new Leaf (600,0, app);
 		oldWoman = new OldWoman(x, y, app);
-		oni = new Oni (0, 0, app);
+		oni = new Oni (900, 300, app);
 		box = new Box (0, 0, app);
 		boxCover = new BoxCover(0, 0, app);
 	}
@@ -59,6 +59,9 @@ public int y;
 	}
 	public void drawLeaf() {
 		leaf.paintLeaf();
+	}
+	public void drawLaugh() {
+		sparrow.paintLaugh();
 	}
 
 	/*public void dragOld() {
