@@ -1,9 +1,11 @@
 package model;
 
 import processing.core.PApplet;
-
+//model package, Interactive class
 public class Interactive extends PApplet{
+	//declaration of PApplet
 	PApplet app;
+	//declaration of classes
 	Sparrow sparrow;
 	Object bamboo;
 	Object oldWoman;
@@ -11,67 +13,70 @@ public class Interactive extends PApplet{
 	Object box;
 	Object boxCover;
 	Leaf leaf;
-	public int Xold;
-	public int Yoni;
+	
 	public Interactive (PApplet app){
 		this.app=app;
-		Xold=600;
-		Yoni=300;
+		//initialization of the classes
 		sparrow = new Sparrow(0, 0, app);
 		bamboo = new Bamboo(685, 0, app);
 		leaf = new Leaf (600,0, app);
-		oldWoman = new OldWoman(Xold, 399, app);
-		oni = new Oni (900, Yoni, app);
+		oldWoman = new OldWoman(600, 399, app);
+		oni = new Oni (900, 300, app);
 		box = new Box (0, 0, app);
 		boxCover = new BoxCover(863, 300, app);
 	}
-
+	//call of all the methods of the classes
+	//sparrow methods
 	public void drawSparrow() {
 		sparrow.paintObject();
-	}
-	public void drawBamboo() {
-		bamboo.paintObject();
-	}
-	public void drawOldWoman() {
-		oldWoman.paintObject();
-	}
-	public void drawOni() {
-		oni.paintObject();
-	}
-	public void drawBox() {
-		box.paintObject();
-	}
-	public void drawBoxCover(){
-		boxCover.paintObject();
-	}
-	public void drawShineOld() {
-		oldWoman.paintShine();
-	}
-	public void drawShineBamboo() {
-		bamboo.paintShine();
 	}
 	public void drawShineSparrow() {
 		sparrow.paintShine();
 	}
-	public void drawShineBoxCover() {
-		boxCover.paintShine();
+	public void drawLaugh() {
+		sparrow.paintLaugh();
 	}
-	public void drawShineOni() {
-		oni.paintShine();
+	//bamboo methods
+	public void drawBamboo() {
+		bamboo.paintObject();
+	}
+	public void drawShineBamboo() {
+		bamboo.paintShine();
 	}
 	public void drawLeaf() {
 		leaf.paintLeaf();
 	}
-	public void drawLaugh() {
-		sparrow.paintLaugh();
+	//old woman methods
+	public void drawOldWoman() {
+		oldWoman.paintObject();
 	}
-
+	public void drawShineOld() {
+		oldWoman.paintShine();
+	}
 	public void dragOld() {
 		oldWoman.dragObject();
 	}
+	//Oni methods
+	public void drawOni() {
+		oni.paintObject();
+	}
+	public void drawShineOni() {
+		oni.paintShine();
+	}
 	public void dragOni(){
 		oni.dragObject();
-	}	
+	}
+	//box methods
+	public void drawBox() {
+		box.paintObject();
+	}
+	//box cover methods
+	public void drawBoxCover(){
+		boxCover.paintObject();
+	}
+	public void drawShineBoxCover() {
+		boxCover.paintShine();
+	}		
 	public void dragBoxCover(){
 		boxCover.dragObject();
 	}	

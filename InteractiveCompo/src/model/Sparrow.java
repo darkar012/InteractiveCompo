@@ -2,8 +2,9 @@ package model;
 
 import processing.core.PApplet;
 import processing.core.PImage;
-
+//daughter class Sparrow
 public class Sparrow extends Object{
+	//PImage to paint a unique image for this object
 	PImage laugh;
 	public Sparrow (int x,int y,PApplet app) {
 		super(x, y, app);
@@ -11,6 +12,7 @@ public class Sparrow extends Object{
 		shine = app.loadImage("../resources/sparrowShine.png");
 		laugh = app.loadImage("../resources/sparrowLaugh.png");
 	}
+	//methods
 	protected void paintObject() {
 		app.image(object, x, y);
 	}
@@ -19,6 +21,7 @@ public class Sparrow extends Object{
 	}
 	protected void dragObject() {
 	}
+	//method to paint a image, that's the interaction
 	public void paintLaugh() {
 		app.image(laugh, x, y);
 	}
