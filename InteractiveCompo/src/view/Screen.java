@@ -14,6 +14,7 @@ public class Screen extends PApplet{
 	CompoScreen compo;
 	FinalScreen end;
 	String [] story;
+	String storyChanged;
 	ArrayList <String> words;
 	int state;
 	int interaction;
@@ -52,7 +53,6 @@ public class Screen extends PApplet{
 			}
 		}
 	}
-
 
 	public void draw(){
 		switch(state) {
@@ -111,8 +111,8 @@ public class Screen extends PApplet{
 			}
 			if (interactionCounter==5) {
 				state=2;
-				}
-		break;
+			}
+			break;
 		case 2 :
 			end.paintFinalScreen();
 		}	
@@ -154,11 +154,11 @@ public class Screen extends PApplet{
 					if (old==false) {
 						if  (mouseX > 542 && mouseX < 542 + 20
 								&& mouseY > 588 && mouseY < 588+71){
-						interactionCounter+=1;
-						old=true;
+							interactionCounter+=1;
+							old=true;
 						}
 					}
-				compo.dragOld();
+					compo.dragOld();
 				}
 			}
 			if (mouseX > 1000 && mouseX < 1000 + 120
