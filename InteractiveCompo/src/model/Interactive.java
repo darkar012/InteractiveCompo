@@ -11,8 +11,8 @@ public class Interactive extends PApplet{
 	Object box;
 	Object boxCover;
 	Leaf leaf;
-public int Xold;
-public int Yoni;
+	public int Xold;
+	public int Yoni;
 	public Interactive (PApplet app){
 		this.app=app;
 		Xold=600;

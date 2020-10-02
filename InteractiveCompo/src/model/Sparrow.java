@@ -17,10 +17,7 @@ public class Sparrow extends Object{
 	protected void paintShine() {
 		app.image(shine,x,y);
 	}
-	@Override
 	protected void dragObject() {
-		// TODO Auto-generated method stub
-		
 	}
 	public void paintLaugh() {
 		app.image(laugh, x, y);

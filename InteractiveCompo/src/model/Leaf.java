@@ -4,10 +4,10 @@ import processing.core.PApplet;
 import processing.core.PImage;
 
 public class Leaf {
-int x;
-int y;
-PApplet app;
-PImage leaf;
+	int x;
+	int y;
+	PApplet app;
+	PImage leaf;
 	public Leaf (int x, int y, PApplet app) {
 		this.app = app;
 		this.x=x;
@@ -16,9 +16,7 @@ PImage leaf;
 	}
 	public void paintLeaf() {
 		app.image(leaf, x, y);
-		x=x+5;
-		x++;
-		y=y+5;
-		y++;
+		x+=5;
+		y+=5;
 	}
 }

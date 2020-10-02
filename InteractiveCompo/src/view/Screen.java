@@ -17,15 +17,27 @@ public class Screen extends PApplet{
 	int state;
 	int interaction;
 	int time;
+	int interactionCounter;
 	boolean disable;
-	boolean dragged;
+	boolean interact;
+	boolean spar;
+	boolean oni;
+	boolean bamboo;
+	boolean boxCover;
+	boolean old;
 	public void settings() {
 		size (1171,659);
 		compo = new CompoScreen(this);
 		state = 1;
 		interaction = 0;
 		disable = false;
-		dragged = false;
+		interact=false;
+		interactionCounter=0;
+		spar=false;
+		oni=false;
+		bamboo=false;
+		boxCover=false;
+		old=false;
 	}
 	public void setup() {
 		story = loadStrings("../resources/story.txt");
@@ -78,7 +90,8 @@ public class Screen extends PApplet{
 				}
 				//System.out.println(mouseX);
 				//System.out.println(mouseY);
-				System.out.println(interaction);
+				//System.out.println(interact);
+				System.out.println(interactionCounter);
 
 			}
 			switch (interaction) {
@@ -92,9 +105,6 @@ public class Screen extends PApplet{
 					disable = false;
 					interaction = 0;
 				}
-			break;
-			case 3:
-				compo.dragOld();
 				break;
 			}
 		}
@@ -105,38 +115,62 @@ public class Screen extends PApplet{
 		case 1:
 			if (mouseX > 849 && mouseX < 849 + 321
 					&& mouseY > 0 && mouseY < 0+283) {
+				if (bamboo==false) {
+					interactionCounter+=1;
+					bamboo=true;
+				}
 				interaction = 1;
 			}else if (mouseX > 0 && mouseX < 0 + 323
 					&& mouseY > 291 && mouseY < 291 +120){
-						interaction = 2;
-		}
-							break;
-		}
-	}
-	/*public void mouseRelease() {
-		if (mouseX > 658 && mouseX < 658 + 227
-				&& mouseY > 430 && mouseY < 430+225 ) {
-		locked = false;
-		}
-	}*/
-	public void mouseDragged() {
-		switch (state) {
-		case 1:
-			dragged=true;
-			if (mouseX > 550 && mouseX < 658 + 227
-					&& mouseY > 430 && mouseY < 430+225 ) {
-				compo.dragOld();
-				dragged=false;
-			} 
-			if (mouseX > 1000 && mouseX < 1000 + 120
-					&& mouseY > 108 && mouseY < 208 +204) {
-				compo.dragOni();
-			}if (mouseX > 200 && mouseX < 896 + 275
-					&& mouseY > 200 && mouseY < 312 +235 ) {
-				compo.dragBoxCover();
+				if (spar==false) {
+					interactionCounter+=1;
+					spar=true;
+				}
+				interaction = 2;
 			}
 			break;
 		}
 	}
+	public void mouseDragged() {
+		interact =false;
+		if (interact==false) {
+			if (mouseX > 550 && mouseX < 658 + 227
+					&& mouseY > 556 && mouseY < 556+101) {
+				interact = true;
+				if (interactionCounter==4) {
+					if (old==false) {
+						interactionCounter+=1;
+						old=true;
+					}
+				}
+
+				compo.dragOld();
+			}
+			if (mouseX > 1000 && mouseX < 1000 + 120
+					&& mouseY > 108 && mouseY < 208 +204) {
+				interact=true;
+				if (interactionCounter>2 && interactionCounter<5) {
+					if (oni==false) {
+						interactionCounter+=1;
+						oni=true;
+					}
+					compo.dragOni();
+				}
+			}
+			if (mouseX > 200 && mouseX < 896 + 200
+					&& mouseY > 390 && mouseY < 390 +61) {
+				interact=true;
+				if (interactionCounter>1 && interactionCounter<4) {
+					if (boxCover==false) {
+						interactionCounter+=1;
+						boxCover=true;
+					}
+					compo.dragBoxCover();
+				}
+			}
+		}
+
+	}
 }
+
 
