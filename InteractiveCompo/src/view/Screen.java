@@ -12,6 +12,7 @@ public class Screen extends PApplet{
 		PApplet.main(Screen.class.getName());
 	}
 	CompoScreen compo;
+	FinalScreen end;
 	String [] story;
 	ArrayList <String> words;
 	int state;
@@ -28,6 +29,7 @@ public class Screen extends PApplet{
 	public void settings() {
 		size (1171,659);
 		compo = new CompoScreen(this);
+		end = new FinalScreen(this);
 		state = 1;
 		interaction = 0;
 		disable = false;
@@ -88,10 +90,10 @@ public class Screen extends PApplet{
 				}else if (words.get(i).equals("tapa")) {
 					compo.drawBoxCover();
 				}
-				//System.out.println(mouseX);
-				//System.out.println(mouseY);
+				System.out.println(mouseX);
+				System.out.println(mouseY);
 				//System.out.println(interact);
-				System.out.println(interactionCounter);
+				//System.out.println(interactionCounter);
 
 			}
 			switch (interaction) {
@@ -107,7 +109,13 @@ public class Screen extends PApplet{
 				}
 				break;
 			}
-		}
+			if (interactionCounter==5) {
+				state=2;
+				}
+		break;
+		case 2 :
+			end.paintFinalScreen();
+		}	
 
 	}
 	public void mouseClicked() {
@@ -129,25 +137,32 @@ public class Screen extends PApplet{
 				interaction = 2;
 			}
 			break;
+		case 2: 
+			if (mouseX > 367 && mouseX < 367 + 437
+					&& mouseY > 360 && mouseY < 360 +86) {
+				exit();
+			}
 		}
 	}
 	public void mouseDragged() {
 		interact =false;
 		if (interact==false) {
-			if (mouseX > 550 && mouseX < 658 + 227
+			if (mouseX > 550 && mouseX < 550 + 335
 					&& mouseY > 556 && mouseY < 556+101) {
 				interact = true;
 				if (interactionCounter==4) {
 					if (old==false) {
+						if  (mouseX > 542 && mouseX < 542 + 20
+								&& mouseY > 588 && mouseY < 588+71){
 						interactionCounter+=1;
 						old=true;
+						}
 					}
-				}
-
 				compo.dragOld();
+				}
 			}
 			if (mouseX > 1000 && mouseX < 1000 + 120
-					&& mouseY > 108 && mouseY < 208 +204) {
+					&& mouseY > 20 && mouseY < 20 +392) {
 				interact=true;
 				if (interactionCounter>2 && interactionCounter<5) {
 					if (oni==false) {
@@ -157,7 +172,7 @@ public class Screen extends PApplet{
 					compo.dragOni();
 				}
 			}
-			if (mouseX > 200 && mouseX < 896 + 200
+			if (mouseX > 250 && mouseX < 250 + 846
 					&& mouseY > 390 && mouseY < 390 +61) {
 				interact=true;
 				if (interactionCounter>1 && interactionCounter<4) {

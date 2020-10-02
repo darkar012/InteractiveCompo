@@ -21,6 +21,7 @@ public abstract class Object extends PApplet{
 	protected void paintShine () {
 		app.image(shine, 0, 0);
 	}
+	
 	public int getX() {
 		return x;
 	}
@@ -33,6 +34,7 @@ public abstract class Object extends PApplet{
 	public void setY(int y) {
 		this.y = y;
 	}
+	
 	protected abstract void dragObject();
 	
 }
