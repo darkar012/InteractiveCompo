@@ -55,14 +55,46 @@ public class Screen extends PApplet{
 		story = loadStrings("../resources/story.txt");
 		//initialization of the arraylist
 		words = new ArrayList<String>();
+		//new arraylist
+		//String[] storyEnd;
 		//process to save the text words into the words arraylist
 		for (int i = 0; i < story.length; i++) {
 			String [] tempArray = story[i].split(" ");
 			for (int j = 0; j < tempArray.length; j++) {
 				words.add(tempArray[j]);
 			}
-			}
 		}
+		//Intent of write the txt
+		/*for (int i = 0; i < story.length; i++) {
+			String change = story[i].toString();
+			storyEnd = split(change,".");
+			for (int j1 = 0; j1 < change.length(); j1++) {
+				//if (words.get(i).equals("GORRIÓN(1)")) {
+				change.replace("tapa","TAPA");
+				//}else if (words.get(i).equals("reían(1)")) {
+				change.replace("reían(1)","REÍAN(1)");
+				//}else if (words.get(i).equals("iré(1)")) {
+				change.replace("iré(1)","IRÉ(1)");
+				//}else if (words.get(i).equals("ella(1),")) {
+				change.replace("ella(1),","ELLA(1),");
+				//}else if (words.get(i).equals("cesta(1)")) {
+				change.replace("cesta(1)","CESTA(1)");
+				//}else if (words.get(i).equals("tapa")) {
+				change.replace("tapa","TAPA");
+				//}
+				storyEnd = change.split(".");
+				saveStrings("changeStory.txt", storyEnd);
+				System.out.println(storyEnd);
+			}
+		}*/
+	}
+	
+			
+			/*storyEnd = change.split(".");
+			saveStrings("changeStory.txt", storyEnd);
+			*/
+			
+			
 	
 	public void draw(){
 		//switch of state to change of screen
