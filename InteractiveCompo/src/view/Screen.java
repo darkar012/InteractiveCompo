@@ -61,9 +61,9 @@ public class Screen extends PApplet{
 			for (int j = 0; j < tempArray.length; j++) {
 				words.add(tempArray[j]);
 			}
+			}
 		}
-	}
-
+	
 	public void draw(){
 		//switch of state to change of screen
 		switch(state) {
